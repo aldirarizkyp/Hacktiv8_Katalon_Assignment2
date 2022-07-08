@@ -23,7 +23,7 @@ import com.kms.katalon.core.webservice.verification.WSResponseManager as WSRespo
 import groovy.json.JsonSlurper as JsonSlurper
 
 
-response = WS.sendRequest(findTestObject('GET Objects/Users Object/GET Users'))
+response = WS.sendRequest(findTestObject('GET Objects/Users Objects/GET Users'))
 
 WS.verifyResponseStatusCode(response, 200)
 

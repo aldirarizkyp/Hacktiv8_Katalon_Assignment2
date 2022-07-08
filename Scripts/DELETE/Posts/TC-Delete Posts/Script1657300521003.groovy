@@ -24,39 +24,9 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webservice.verification.WSResponseManager
 
 import groovy.json.JsonSlurper
-response = WS.sendRequest(findTestObject('GET Objects/Users Objects/GET Users By Id'))
+
+response = WS.sendRequest(findTestObject('DELETE Objects/Posts Objects/DELETE Posts'))
 
 WS.verifyResponseStatusCode(response, 200)
 
 assertThat(response.getStatusCode()).isEqualTo(200)
-
-WS.verifyElementPropertyValue(response, 'id', '3')
-
-WS.verifyElementPropertyValue(response, 'name', 'Clementine Bauch')
-
-WS.verifyElementPropertyValue(response, 'username', 'Samantha')
-
-WS.verifyElementPropertyValue(response, 'email', 'Nathan@yesenia.net')
-
-WS.verifyElementPropertyValue(response, 'address.street', 'Douglas Extension')
-
-WS.verifyElementPropertyValue(response, 'address.suite', 'Suite 847')
-
-WS.verifyElementPropertyValue(response, 'address.city', 'McKenziehaven')
-
-WS.verifyElementPropertyValue(response, 'address.zipcode', '59590-4157')
-
-WS.verifyElementPropertyValue(response, 'address.geo.lat', '-68.6102')
-
-WS.verifyElementPropertyValue(response, 'address.geo.lng', '-47.0653')
-
-WS.verifyElementPropertyValue(response, 'phone', '1-463-123-4447')
-
-WS.verifyElementPropertyValue(response, 'website', 'ramiro.info')
-
-WS.verifyElementPropertyValue(response, 'company.name', 'Romaguera-Jacobson')
-
-WS.verifyElementPropertyValue(response, 'company.catchPhrase', 'Face to face bifurcated interface')
-
-WS.verifyElementPropertyValue(response, 'company.bs', 'e-enable strategic applications')
-
