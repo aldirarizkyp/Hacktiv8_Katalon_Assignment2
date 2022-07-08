@@ -24,7 +24,7 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webservice.verification.WSResponseManager
 
 import groovy.json.JsonSlurper
-response = WS.sendRequest(findTestObject('GET Objects/Users Object/GET Users By Id'))
+response = WS.sendRequest(findTestObject('GET Objects/Users Objects/GET Users By Id'))
 
 WS.verifyResponseStatusCode(response, 200)
 
